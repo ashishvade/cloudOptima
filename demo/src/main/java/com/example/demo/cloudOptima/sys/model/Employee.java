@@ -27,8 +27,9 @@ public class Employee {
     private LocalDateTime lastAttendanceDate;
     private LocalDateTime checkInTime;
     private LocalDateTime checkOutTime;
+    private double totalHoursWorked;
 	public Employee(Long id, String employeeId, String name, String department, LocalDateTime lastAttendanceDate,
-			LocalDateTime checkInTime, LocalDateTime checkOutTime) {
+			LocalDateTime checkInTime, LocalDateTime checkOutTime,double totalHoursWorked) {
 		super();
 		this.id = id;
 		this.employeeId = employeeId;
@@ -37,6 +38,13 @@ public class Employee {
 		this.lastAttendanceDate = lastAttendanceDate;
 		this.checkInTime = checkInTime;
 		this.checkOutTime = checkOutTime;
+		this.totalHoursWorked= totalHoursWorked;
+	}
+	public double getTotalHoursWorked() {
+		return totalHoursWorked;
+	}
+	public void setTotalHoursWorked(double totalHoursWorked) {
+		this.totalHoursWorked = totalHoursWorked;
 	}
 	public Employee() {
 		super();
@@ -84,4 +92,7 @@ public class Employee {
 	public void setCheckOutTime(LocalDateTime checkOutTime) {
 		this.checkOutTime = checkOutTime;
 	}
+	 public void setTotalHoursWorked1(double totalHoursWorked) {
+	        this.totalHoursWorked = totalHoursWorked;
+	    }
 }

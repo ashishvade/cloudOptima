@@ -52,6 +52,7 @@ public class EmployeeController {
 
         // Set checkOutTime to null initially
         employee.setCheckOutTime(null);
+        employee.setTotalHoursWorked(0);
         return employeeService.saveEmployeeDetails(employee);
     }
 	
@@ -117,9 +118,9 @@ public class EmployeeController {
 	        }
 	    }
 	 
-	 //to checkin insert 
+	 //to checkout insert 
 	 //post
-	 //http://localhost:8092/api/employees/{employeeId}/check-out
+	 //http://localhost:8092/api/employees/em03/check-out
 	 @PostMapping("/{employeeId}/check-out")
 	    public void recordCheckOut(@PathVariable String employeeId) {
 	        try {

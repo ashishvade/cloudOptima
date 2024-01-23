@@ -14,7 +14,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 	Employee findByEmployeeId(String employeeId);
 
-	 List<Employee> findByLastAttendanceDate(Date date);
+	 List<Employee> findByLastAttendanceDate(LocalDateTime date );
 	    
 	    List<Employee> findByLastAttendanceDateBetween(Date startDate, Date endDate);
 	 List<Employee> findByLastAttendanceDateBetween(LocalDateTime startDate, LocalDateTime endDate);

@@ -12,8 +12,8 @@ public class EmployeeReport {
     private double totalHoursWorked;
 
     // Constructors, getters, setters, and other methods
-
-    public EmployeeReport(String employeeId, LocalDateTime date, LocalDateTime checkInTime, LocalDateTime checkOutTime, double totalHoursWorked) {
+//
+    public EmployeeReport(String employeeId, LocalDateTime date, LocalDateTime checkInTime, LocalDateTime checkOutTime,double totalHoursWorked) {
         this.employeeId = employeeId;
         this.date = date;
         this.checkInTime = checkInTime;
@@ -23,7 +23,7 @@ public class EmployeeReport {
 
     public EmployeeReport() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public String getEmployeeId() {
