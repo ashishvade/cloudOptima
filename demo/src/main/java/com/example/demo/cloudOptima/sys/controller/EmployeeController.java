@@ -144,7 +144,7 @@ public class EmployeeController {
 		 return attendanceReport;
 	    }
 	 
-	//to get daily aatandence report
+	//to get weekly aatandence report
 		 //get
 	 //http://localhost:8092/api/employees/attendance-report/weekly?startDate=2024-01-21&endDate=2024-01-28
 	   @GetMapping("/attendance-report/weekly")
