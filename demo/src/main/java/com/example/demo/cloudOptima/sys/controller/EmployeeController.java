@@ -38,6 +38,11 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 	
+	//to get all employee details
+	@GetMapping
+    public List<Employee> getAllEmployees() {
+        return employeeService.getAllEmployees();
+    }
 	
 	//to insert employee detailes
 	//post

@@ -35,7 +35,9 @@ public class EmployeeService {
         }
         return employeeRepository.save(employee);
     }
-
+    public List<Employee> getAllEmployees() {
+        return employeeRepository.findAll();
+    }
     public Employee getEmployeeByEmployeeId(String employeeId) {
         return employeeRepository.findByEmployeeId(employeeId);
     }
@@ -147,6 +149,8 @@ public class EmployeeService {
         for (Employee employee : attendanceRecords) {
             EmployeeReport report = new EmployeeReport(
                 employee.getEmployeeId(),
+                employee.getName(),         // Provide name from Employee
+                employee.getDepartment(),   // Provide department from Employee
                 employee.getLastAttendanceDate(),
                 employee.getCheckInTime(),
                 employee.getCheckOutTime(),
@@ -156,6 +160,7 @@ public class EmployeeService {
         }
         return reports;
     }
+
 }
 
 

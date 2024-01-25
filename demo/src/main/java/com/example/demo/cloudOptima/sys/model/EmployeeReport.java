@@ -1,30 +1,34 @@
 package com.example.demo.cloudOptima.sys.model;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 public class EmployeeReport {
 
     private String employeeId;
+    private String name;
+    private String department;
     private LocalDateTime date;
     private LocalDateTime checkInTime;
     private LocalDateTime checkOutTime;
     private double totalHoursWorked;
 
-    // Constructors, getters, setters, and other methods
-//
-    public EmployeeReport(String employeeId, LocalDateTime date, LocalDateTime checkInTime, LocalDateTime checkOutTime,double totalHoursWorked) {
+    public EmployeeReport(String employeeId, String name, String department, LocalDateTime date,
+                          LocalDateTime checkInTime, LocalDateTime checkOutTime, double totalHoursWorked) {
         this.employeeId = employeeId;
+        this.name = name;
+        this.department = department;
         this.date = date;
         this.checkInTime = checkInTime;
         this.checkOutTime = checkOutTime;
         this.totalHoursWorked = totalHoursWorked;
     }
 
+
     public EmployeeReport() {
 		super();
 		
 	}
+
 
 	public String getEmployeeId() {
         return employeeId;
@@ -32,6 +36,22 @@ public class EmployeeReport {
 
     public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     public LocalDateTime getDate() {
