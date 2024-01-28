@@ -149,8 +149,8 @@ public class EmployeeService {
         for (Employee employee : attendanceRecords) {
             EmployeeReport report = new EmployeeReport(
                 employee.getEmployeeId(),
-                employee.getName(),         // Provide name from Employee
-                employee.getDepartment(),   // Provide department from Employee
+                employee.getName(),         
+                employee.getDepartment(),  
                 employee.getLastAttendanceDate(),
                 employee.getCheckInTime(),
                 employee.getCheckOutTime(),
